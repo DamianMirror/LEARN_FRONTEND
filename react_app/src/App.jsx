@@ -1,9 +1,13 @@
 import Card from "./Card/Card.jsx";
+import MyComponent from "./MyComponent.jsx";
+import ColorPicker from "./ColorPicker.jsx";
 
 
 function App() {
   return(
     <>
+      <MyComponent />
+      <ColorPicker />
       <Card 
         image="https://dominos.ua/_next/image/?url=https%3A%2F%2Fmedia-v3.dominos.ua%2FProducts%2FPitsa%2FPitsy%2FPitsa%20z%20vialenymy%20tomatamy%2Fdriedtomato-pieces.webp&w=980&q=75"
         name="Піца з в’яленими томатами та куркою" 

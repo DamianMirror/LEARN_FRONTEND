@@ -67,3 +67,8 @@
   width: 100%;
 }
 
+.sizes .active {
+  background-color: #aa553c;
+  color: #ffffff;
+}
+

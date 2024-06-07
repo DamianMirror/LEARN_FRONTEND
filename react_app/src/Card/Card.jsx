@@ -2,10 +2,16 @@ import PizzaImg from '../assets/Pizza.jpg';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
 import classNames from 'classnames';
+import React, {useState} from 'react';
 
 
 function Card(props){
 
+    const [pressClass, setPressClass] = useState();
+
+    const updatePressClass = (buttonName) => {
+        setPressClass(buttonName);
+    }
 
     return(
         <div className={styles.card}>
@@ -16,11 +22,15 @@ function Card(props){
             </div>
             <div className={styles.sizes}>
                 <div className={styles.buttonGroup}>
-                    <button className={styles.button}>Маленька</button>
-                    <button className={styles.button}>Середня</button>
-                    <button className={styles.button}>Велика</button>
+                    <button className={classNames(styles.button, {[styles.active]: pressClass === 'small'})}
+                    onClick={() => updatePressClass('small')}>Маленька</button>
+                    <button className={classNames(styles.button, {[styles.active]: pressClass === 'medium'})}
+                    onClick={() => updatePressClass('medium')}>Середня</button>
+                    <button className={classNames(styles.button, {[styles.active]: pressClass === 'big'})}
+                    onClick={() => updatePressClass('big')}>Велика</button>
                 </div>
-                <button className={classNames(styles.button, styles.buttonBig)}>Найбільша</button>
+                <button className={classNames(styles.button, styles.buttonBig,{[styles.active]: pressClass === 'wayBig'})}
+                onClick={() => updatePressClass('wayBig')}>Найбільша</button>
             </div>
             
         </div>
