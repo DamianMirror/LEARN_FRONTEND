@@ -1,11 +1,13 @@
 import Card from "./Card/Card.jsx";
 import MyComponent from "./MyComponent.jsx";
 import ColorPicker from "./ColorPicker.jsx";
+import CarsList from "./CarsList.jsx";
 
 
 function App() {
   return(
     <>
+      <CarsList />
       <MyComponent />
       <ColorPicker />
       <Card 

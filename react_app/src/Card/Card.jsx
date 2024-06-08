@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 
 function Card(props){
 
-    const [pressClass, setPressClass] = useState();
+    const [pressClass, setPressClass] = useState("wayBig");
 
     const updatePressClass = (buttonName) => {
         setPressClass(buttonName);
