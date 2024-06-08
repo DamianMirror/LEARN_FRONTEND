@@ -2,11 +2,13 @@ import Card from "./Card/Card.jsx";
 import MyComponent from "./MyComponent.jsx";
 import ColorPicker from "./ColorPicker.jsx";
 import CarsList from "./CarsList.jsx";
+import Effect from "./Effect.jsx";
 
 
 function App() {
   return(
     <>
+      <Effect />
       <CarsList />
       <MyComponent />
       <ColorPicker />
